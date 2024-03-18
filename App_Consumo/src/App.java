@@ -3,11 +3,19 @@ import javax.swing.JOptionPane;
 
 public class App{
     public static void main(String[] args) {
-        App app;
-        app = new App ();
+       // App app;
+        //app = new App ();
         
-        app.imprimeDados();  
-      }
+        //app.imprimeDados(); 
+        
+        boolean continuar;
+        do {
+            App app = new App();
+            app.imprimeDados();
+            continuar = JOptionPane.showConfirmDialog(null, "Deseja calcular o consumo de outro aparelho?", "Continuar?", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION;
+        } while (continuar);
+    }
+      
     
     String aparelho = JOptionPane.showInputDialog("Nome do aparelho:");{
 
